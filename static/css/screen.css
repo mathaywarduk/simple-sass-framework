@@ -1,0 +1,195 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  font-size: 15px; }
+
+body {
+  font-size: 1em;
+  line-height: 1.33333;
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #333333;
+  margin-bottom: 0em; }
+
+/*
+## Text styling
+
+Heading 1
+
+```
+<h1>Heading 1<h1>
+
+```
+*/
+h1 {
+  font-size: 2em;
+  line-height: 1.2;
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #c10000;
+  margin-bottom: 0.5em; }
+
+/*
+
+Heading 2
+
+```
+<h2>Heading 2<h2>
+```
+
+*/
+h2 {
+  font-size: 1.6em;
+  line-height: 1.16667;
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #c10000;
+  margin-bottom: 0.625em; }
+
+/*
+
+Heading 3
+
+```
+<h3>Heading 3<h3>
+```
+
+*/
+h3 {
+  font-size: 1em;
+  line-height: 1.33333;
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #333333;
+  margin-bottom: 1em;
+  text-transform: uppercase; }
+
+/*
+
+Paragraph text
+
+```
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu dui viverra, facilisis elit sed, tempor libero. Quisque semper libero eu elementum laoreet. Duis et sollicitudin nibh. Fusce dictum ipsum faucibus condimentum tempor.</p>
+```
+
+*/
+p {
+  font-size: 1em;
+  line-height: 1.33333;
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #333333;
+  margin-bottom: 0.66667em; }
+
+.layout__container {
+  margin-left: auto;
+  margin-right: auto;
+  display: block; }
+
+html, body {
+  min-height: 100%; }
+
+body {
+  background: url("/static/images/bg.jpg") #dddddd no-repeat top center;
+  background-size: cover; }
+  body * {
+    box-sizing: border-box; }
+
+.layout__container {
+  max-width: 45em;
+  padding: 1.33333em 1.33333em 1.33333em 1.33333em;
+  background-color: white;
+  border-top: 10px solid #c10000; }
+
+.list {
+  padding-left: 0.66667em;
+  margin-bottom: 1em; }
+
+.list__item {
+  margin-bottom: 0.66667em; }
+
+.list__item--end {
+  margin-bottom: 0; }
+
+.list--bullet {
+  list-style-type: disc;
+  padding-left: 1.66667em; }
+  .list--bullet .list__item {
+    margin-bottom: 0.33333em; }
+
+.list--number, .list--method {
+  counter-reset: items; }
+  .list--number .list__item, .list--method .list__item {
+    padding-top: 0.33333em; }
+    .list--number .list__item:before, .list--method .list__item:before {
+      counter-increment: items 1;
+      content: counter(items, decimal) ".";
+      color: #cc0000;
+      margin-right: 0.33333em; }
+
+.list--method .list__item {
+  margin-bottom: 1em; }
+  .list--method .list__item:before {
+    font-size: 1.6em;
+    line-height: 1.16667;
+    font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    color: #cc0000;
+    margin-bottom: 0em;
+    font-style: italic; }
+
+.media {
+  border-top: 1px dotted #cccccc;
+  border-bottom: 1px dotted #cccccc;
+  padding: 1.33333em 0em 0.66667em 0em; }
+
+.media__caption {
+  text-align: center;
+  font-style: italic;
+  margin-top: 0.33333em; }
+
+.media--full {
+  width: 100%;
+  margin: 0 0 0.66667em 0; }
+  .media--full .media__item {
+    width: 100%; }
