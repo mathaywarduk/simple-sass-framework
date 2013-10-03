@@ -1,0 +1,82 @@
+//////////////////////////////////////////////////
+//                                              //
+//  List Styling Module                         //
+//                                              //
+//  Created: 01-08-2013                         //
+//  Author: Mat Hayward @ Erskine Design        //
+//  Last Editor: Mat Hayward @ Erskine Design   //
+//  http://www.erskinedesign.com                //
+//  Requires: Text styling module               //
+//                                              //
+//////////////////////////////////////////////////
+
+//////////////////////////////
+// Default variables        //
+//////////////////////////////
+
+$list__number-color: #CC0000 !default;
+
+////////////////////
+// Styling        //
+////////////////////
+
+.list {
+    padding-left: calc-em(10);
+    margin-bottom: calc-em(15);
+}
+
+.list__item {
+    margin-bottom: calc-em(10);
+}
+
+.list__item--end {
+    margin-bottom: 0;
+}
+
+
+
+// Bullet modifier
+.list--bullet {
+    list-style-type: disc;
+    padding-left: calc-em(25);
+
+    .list__item {
+        margin-bottom: calc-em(5);
+    }
+
+}
+
+
+
+// Number modifier
+.list--number {
+    counter-reset: items;
+
+    .list__item {
+        padding-top: calc-em(5);
+
+        &:before {
+            counter-increment: items 1;
+            content: counter(items, decimal) ".";
+            color: $list__number-color;
+            margin-right: calc-em(5);
+        }
+    }
+}
+
+
+// Method modifier
+.list--method {
+
+    @extend .list--number;
+
+    .list__item {
+        margin-bottom: calc-em(15);
+
+        &:before {
+            @include text($text__size--beta, $text__line--beta, $color: $list__number-color);
+            font-style: italic;
+        }
+    }
+
+}

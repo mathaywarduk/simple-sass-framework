@@ -1,0 +1,45 @@
+//////////////////////////////////////////////////
+//                                              //
+//  Media Styling Module                        //
+//                                              //
+//  Created: 01-08-2013                         //
+//  Author: Mat Hayward @ Erskine Design        //
+//  Last Editor: Mat Hayward @ Erskine Design   //
+//  http://www.erskinedesign.com                //
+//  Requires: Text styling module               //
+//                                              //
+//////////////////////////////////////////////////
+
+
+//////////////////////////////
+// Default variables        //
+//////////////////////////////
+
+$media__border: 1px dotted #CCCCCC !default;
+$media__padding: 20, 0, 10, 0 !default;
+
+
+////////////////////
+// Styling        //
+////////////////////
+
+.media {
+    border-top: $media__border;
+    border-bottom: $media__border;
+    padding: calc-em(nth($media__padding, 1)) calc-em(nth($media__padding, 2)) calc-em(nth($media__padding, 3)) calc-em(nth($media__padding, 4));
+}
+
+.media__caption {
+    text-align: center;
+    font-style: italic;
+    margin-top: calc-em(5);
+}
+
+.media--full {
+    width: 100%;
+    margin: 0 0 calc-em(10) 0;
+
+    .media__item {
+        width: 100%;
+    }
+}

@@ -1,0 +1,16 @@
+/////////////////////////////////////////////////
+//                                             //
+//                    BASE                     //
+//                                             //
+//        Site-wide mixins and functions       //
+//                                             //
+/////////////////////////////////////////////////
+
+
+// ## Calculates em size based on required pixel size and context.
+// $target: (required) Required pixel size
+// $context: (optional) Current font size used to calculate em value
+// Returns: Em value
+@function calc-em($target, $context: $base__font-size) {
+    @return ($target / $context) * 1em;
+}

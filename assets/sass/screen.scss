@@ -1,0 +1,29 @@
+//////////////////////////////////////////////////
+//                                              //
+//  Master Styling File                         //
+//                                              //
+//  # Imports all modules used in website       //
+//                                              //
+//  Created: 01-08-2013                         //
+//  Author: Erskine Design                      //
+//  http://www.erskinedesign.com                //
+//                                              //
+//////////////////////////////////////////////////
+
+/////////////////////
+// Required        //
+/////////////////////
+
+@import "base";
+@import "config";
+
+
+/////////////////////
+// Optional        //
+/////////////////////
+
+@import "modules/reset";
+@import "modules/text";
+@import "modules/layout";
+@import "modules/lists";
+@import "modules/media";

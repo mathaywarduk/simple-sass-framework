@@ -1,0 +1,66 @@
+//////////////////////////////////////////////////
+//                                              //
+//  Layout Styling Module                       //
+//                                              //
+//  Created: 01-08-2013                         //
+//  Author: Mat Hayward @ Erskine Design        //
+//  Last Editor: Mat Hayward @ Erskine Design   //
+//  http://www.erskinedesign.com                //
+//                                              //
+//////////////////////////////////////////////////
+
+//////////////////////////////
+// Default variables        //
+//////////////////////////////
+
+$layout__max-width: 675 !default;
+$layout__padding: 20, 20, 20, 20 !default;
+
+$layout__border-width: 10px !default;
+$layout__border-style: solid !default;
+$layout__border-color: #C10000 !default;
+
+$layout__bg-color: #DDDDDD !default;
+$layout__bg-image: none !default;
+$layout__bg-repeat: no-repeat !default;
+$layout__bg-position: top center !default;
+$layout__bg-size: 100% !default;
+
+
+/////////////////////////
+// Placeholders        //
+/////////////////////////
+
+// Centre content
+%layout__block--centered {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+////////////////////
+// Styling        //
+////////////////////
+
+html, body {
+    min-height: 100%;
+}
+
+
+body {
+    background: $layout__bg-image $layout__bg-color $layout__bg-repeat $layout__bg-position;
+    background-size: $layout__bg-size;
+
+    * {
+        box-sizing: border-box;
+    }
+}
+
+.layout__container {
+    @extend %layout__block--centered;
+    max-width: calc-em($layout__max-width);
+    padding: calc-em(nth($layout__padding, 1)) calc-em(nth($layout__padding, 2)) calc-em(nth($layout__padding, 3)) calc-em(nth($layout__padding, 4));
+    background-color: $color__white;
+    border-top: $layout__border-width $layout__border-style $layout__border-color;
+}

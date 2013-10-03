@@ -1,0 +1,120 @@
+// SCSS CONFIGURATION
+
+// @author: Erskine Design
+
+// CONTENTS ------------
+//  - BASE VARIABLES
+//      - SIZES
+//      - FONTS
+//      - COLOURS
+//      - SIZING
+//  - MODULE CONFIGURATION
+//      - LAYOUT
+//      - LISTS
+//      - MEDIA
+// ---------------------
+
+////////////////////////////////////////////////////////////////////////////////////
+//  1. Base Variables                                                             //
+////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////
+// 1.1 Sizes   //
+/////////////////
+
+// $width__small: 481px !default;
+// $width__medium: 767px !default;
+// $width__large: 1200px !default;
+
+
+// $base__vertical-unit: 5 !default;
+// $base__horiz-unit: $base__vertical-unit !default;
+// $base__font-size: 15 !default;
+// $base__line: 20 !default;
+
+
+/////////////////
+// 1.2 Fonts   //
+/////////////////
+
+$text__family-sans:  "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+// $text__family-serif: "Times New Roman", Times, Baskerville, Georgia, serif !default;
+
+
+// Base font-sizes
+// $text__size--alpha: 30 !default;
+// $text__size--beta: 24 !default;
+$text__size--gamma: 15;
+// $text__size--delta: 15 !default;
+
+// Base line-heights
+// $text__line--alpha: 36 !default;
+// $text__line--beta: 28 !default;
+$text__line--gamma: 20;
+// $text__line--delta: 20 !default;
+
+
+/////////////////
+// 1.3 Colours //
+/////////////////
+
+$color__white: #FFFFFF;
+$color__black: #000000;
+
+$color__primary--light: #DD0000;
+$color__primary: #C10000;
+$color__primary--dark: #990000;
+
+$color__secondary--light: #00DD00;
+$color__secondary: #00C100;
+$color__secondary--dark: #009900;
+
+$color__neutral--light: #999999;
+$color__neutral: #666666;
+$color__neutral--dark: #333333;
+
+
+///////////////
+// 1.4 Sizes //
+///////////////
+
+$base__font-size: 15;
+$base__line: 20;
+
+////////////////////////////////////////////////////////////////////////////////////
+//  2. Module Configuration                                                       //
+////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////
+// 2.1 Layout //
+////////////////
+
+// $layout__max-width: 675 !default;
+// $layout__padding: 20, 20, 20, 20 !default;
+
+// $layout__border-width: 10px !default;
+// $layout__border-style: solid !default;
+// $layout__border-color: #C10000 !default;
+
+// $layout__bg-color: #DDDDDD !default;
+$layout__bg-image: url("/static/images/bg.jpg");
+// $layout__bg-repeat: no-repeat !default;
+// $layout__bg-position: top center !default;
+$layout__bg-size: cover;
+
+
+///////////////
+// 2.2 Lists //
+///////////////
+
+// $list__number-color: #CC0000 !default;
+
+
+///////////////
+// 2.3 Media //
+///////////////
+
+// $media__border: 1px dotted #CCCCCC !default;
+// $media__padding: 20, 0, 10, 0 !default;
+

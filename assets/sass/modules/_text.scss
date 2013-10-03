@@ -1,0 +1,116 @@
+//////////////////////////////////////////////////
+//                                              //
+//  Text Styling Module                         //
+//                                              //
+//  Created: 01-08-2013                         //
+//  Erskine Design                              //
+//  Last Editor: Mat Hayward @ Erskine Design   //
+//  http://www.erskinedesign.com                //
+//  Requires: Text styling module               //
+//                                              //
+//////////////////////////////////////////////////
+
+//////////////////////////////
+// Default variables        //
+//////////////////////////////
+
+$text__family-sans:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+// Base font-sizes
+$text__size--alpha: 30 !default;
+$text__size--beta: 24 !default;
+$text__size--gamma: 20 !default;
+$text__size--delta: 15 !default;
+
+// Base line-heights
+$text__line--alpha: 36 !default;
+$text__line--beta: 28 !default;
+$text__line--gamma: 22 !default;
+$text__line--delta: 20 !default;
+
+
+/////////////////////////////////
+// Mixins and Functions        //
+/////////////////////////////////
+
+// ## Includes standard text styling properties.
+// $size: (required) Required font size in pixels
+// $line: (required) Required line height in pixels
+// $family (optional) Font family stack string
+@mixin text($size, $line, $margin: 0, $family: $text__family-sans, $color: $color__neutral--dark, $weight: normal) {
+    font-size: calc-em($size);
+    line-height: ($line/$size);
+    font-family: $family;
+    font-weight: $weight;
+    color: $color;
+    margin-bottom: calc-em($margin, $size);
+}
+
+
+////////////////////
+// Styling        //
+////////////////////
+
+html {
+    font-size: $base__font-size * 1px;
+}
+
+body {
+    @include text($base__font-size, $base__line, $color: $color__neutral--dark);
+}
+
+/*
+## Text styling
+
+Heading 1
+
+```
+<h1>Heading 1<h1>
+
+```
+*/
+h1 {
+    @include text($text__size--alpha, $text__line--alpha, 15, $color: $color__primary, $weight: bold);
+}
+
+/*
+
+Heading 2
+
+```
+<h2>Heading 2<h2>
+```
+
+*/
+h2 {
+    @include text($text__size--beta, $text__line--beta, 15, $color: $color__primary);
+}
+
+/*
+
+Heading 3
+
+```
+<h3>Heading 3<h3>
+```
+
+*/
+
+h3 {
+    @include text($text__size--gamma, $text__line--gamma, 15);
+    text-transform: uppercase;
+}
+
+/*
+
+Paragraph text
+
+```
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu dui viverra, facilisis elit sed, tempor libero. Quisque semper libero eu elementum laoreet. Duis et sollicitudin nibh. Fusce dictum ipsum faucibus condimentum tempor.</p>
+```
+
+*/
+
+p {
+    @include text($text__size--delta, $text__line--delta, 10);
+}
