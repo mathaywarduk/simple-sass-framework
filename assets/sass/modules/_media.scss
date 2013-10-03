@@ -23,6 +23,31 @@ $media__padding: 20, 0, 10, 0 !default;
 // Styling        //
 ////////////////////
 
+/*
+## Media modules
+
+Basic media module
+
+```
+<figure class="media">
+    <img src="http://www.placekitten.com/300/200" class="media__item" alt="A cat" />
+    <figcaption class="media__caption">This is a cat</figcaption>
+</figure>
+
+```
+
+Full width media module
+
+```
+<figure class="media media--full">
+    <img src="http://www.placekitten.com/300/200" class="media__item" alt="A cat" />
+    <figcaption class="media__caption">This is a cat</figcaption>
+</figure>
+
+```
+
+*/
+
 .media {
     border-top: $media__border;
     border-bottom: $media__border;
@@ -33,6 +58,7 @@ $media__padding: 20, 0, 10, 0 !default;
     text-align: center;
     font-style: italic;
     margin-top: calc-em(5);
+    font-family: $text__family-sans; // Added to make styleguide work
 }
 
 .media--full {

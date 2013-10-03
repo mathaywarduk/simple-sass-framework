@@ -20,9 +20,26 @@ $list__number-color: #CC0000 !default;
 // Styling        //
 ////////////////////
 
+/*
+## Lists
+
+Basic list
+
+```
+<ul class="list">
+    <li class="list__item">Apples</li>
+    <li class="list__item">Pears</li>
+    <li class="list__item list__item--end">Carrots</li>
+</ul>
+
+```
+*/
+
 .list {
     padding-left: calc-em(10);
     margin-bottom: calc-em(15);
+    list-style-type: none; // Added to make styleguide work
+    font-family: $text__family-sans; // Added to make styleguide work
 }
 
 .list__item {
@@ -36,6 +53,20 @@ $list__number-color: #CC0000 !default;
 
 
 // Bullet modifier
+/*
+
+Bulleted list
+
+```
+<ul class="list list--bullet">
+    <li class="list__item">Apples</li>
+    <li class="list__item">Pears</li>
+    <li class="list__item list__item--end">Carrots</li>
+</ul>
+
+```
+
+*/
 .list--bullet {
     list-style-type: disc;
     padding-left: calc-em(25);
@@ -49,6 +80,20 @@ $list__number-color: #CC0000 !default;
 
 
 // Number modifier
+/*
+
+Numbered list
+
+```
+<ol class="list list--number">
+    <li class="list__item">Apples</li>
+    <li class="list__item">Pears</li>
+    <li class="list__item list__item--end">Carrots</li>
+</ol>
+
+```
+
+*/
 .list--number {
     counter-reset: items;
 
@@ -66,6 +111,20 @@ $list__number-color: #CC0000 !default;
 
 
 // Method modifier
+/*
+
+Method list
+
+```
+<ol class="list list--method">
+    <li class="list__item">Apples</li>
+    <li class="list__item">Pears</li>
+    <li class="list__item list__item--end">Carrots</li>
+</ol>
+
+```
+
+*/
 .list--method {
 
     @extend .list--number;

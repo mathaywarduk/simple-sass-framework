@@ -57,6 +57,18 @@ body {
     }
 }
 
+/*
+## Layout
+
+Container
+
+```
+<section class="layout__container">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu dui viverra, facilisis elit sed, tempor libero. Quisque semper libero eu elementum laoreet. Duis et sollicitudin nibh. Fusce dictum ipsum faucibus condimentum tempor.</p>
+</section>
+
+```
+*/
 .layout__container {
     @extend %layout__block--centered;
     max-width: calc-em($layout__max-width);
