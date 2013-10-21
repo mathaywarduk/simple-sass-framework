@@ -28,6 +28,13 @@ $text__line--beta: 28 !default;
 $text__line--gamma: 22 !default;
 $text__line--delta: 20 !default;
 
+// Colours
+$text__colour--base: #333333 !default;
+$text__colour--alpha: #990000 !default;
+$text__colour--beta: #990000 !default;
+$text__colour--gamma: #333333 !default;
+$text__colour--delta: #333333 !default;
+
 
 /////////////////////////////////
 // Mixins and Functions        //
@@ -56,61 +63,22 @@ html {
 }
 
 body {
-    @include text($base__font-size, $base__line, $color: $color__neutral--dark);
+    @include text($base__font-size, $base__line, $color: $text__colour--base);
 }
 
-/*
-## Text styling
-
-Heading 1
-
-```
-<h1>Heading 1<h1>
-
-```
-*/
 h1 {
-    @include text($text__size--alpha, $text__line--alpha, 15, $color: $color__primary, $weight: bold);
+    @include text($text__size--alpha, $text__line--alpha, 15, $color: $text__colour--alpha, $weight: bold);
 }
 
-/*
-
-Heading 2
-
-```
-<h2>Heading 2<h2>
-```
-
-*/
 h2 {
-    @include text($text__size--beta, $text__line--beta, 15, $color: $color__primary);
+    @include text($text__size--beta, $text__line--beta, 15, $color: $text__colour--beta);
 }
-
-/*
-
-Heading 3
-
-```
-<h3>Heading 3<h3>
-```
-
-*/
 
 h3 {
-    @include text($text__size--gamma, $text__line--gamma, 15);
+    @include text($text__size--gamma, $text__line--gamma, 15, $color: $text__colour--gamma);
     text-transform: uppercase;
 }
 
-/*
-
-Paragraph text
-
-```
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu dui viverra, facilisis elit sed, tempor libero. Quisque semper libero eu elementum laoreet. Duis et sollicitudin nibh. Fusce dictum ipsum faucibus condimentum tempor.</p>
-```
-
-*/
-
 p {
-    @include text($text__size--delta, $text__line--delta, 10);
+    @include text($text__size--delta, $text__line--delta, 10, $color: $text__colour--delta);
 }
