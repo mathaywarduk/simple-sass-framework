@@ -44,7 +44,7 @@ $text__colour--delta: #333333 !default;
 // $size: (required) Required font size in pixels
 // $line: (required) Required line height in pixels
 // $family (optional) Font family stack string
-@mixin text($size, $line, $margin: 0, $family: $text__family-sans, $color: $color__neutral--dark, $weight: normal) {
+@mixin text($size, $line, $margin: 0, $family: $text__family-sans, $color: $text__colour--base, $weight: normal) {
     font-size: calc-em($size);
     line-height: ($line/$size);
     font-family: $family;
